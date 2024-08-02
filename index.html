@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+    <title>KaraBeautyBar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+    <div class="header">
+        <div class="menuKiri">
+            <ul>
+             <li><a href="index.html">MENU</a></li>
+            <li><a href="sosmed.html">SOSMED</a></li>
+            <li><a href="kontak.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="judulkanan">
+            <h1 class="judul">KARA BEAUTY BAR</h1>
+        </div>
+    </div>
+    <div class="hero"></div>
+    <div class="content cf">
+        <div class="main">
+            <h2>produk Terbaru</h2>
+
+            <section class="product" data-kategori="produk">
+                <a href="produk1.html"><img src="skintific.png" width="200" height="200" alt="produk 1"></a>
+                <h3>Skintific</h3>
+                <p class="price">Harga: Rp.500.000</p>
+                <button class="tombol-beli" onclick="tampilkandetailproduk ('skintific','Rp.500.00','gabungan 5 jenis ceramide untuk melembapkan kulit secara mendalam dan memperkuat lapisan kulit',
+                'skintific.png')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('Skintific',500000)">tambahkan ke keranjang</button><br/>
+            
+
+                </section>
+
+            <section class="product" data-kategori="product">
+                <a href="produk2.html"><img src="msglow.jpg" width="200" height="200" alt="Produk 2"></a>
+                <h3>MS Glow</h3>
+                <p class="price">Harga: Rp.480.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk('msglow','Rp.480.000',' Memperkuat skin barrier; Menjaga kelembapan kulit; Meredakan kemerahan dan iritasi; Mengatasi masalah jerawat','msglow.jpg')">detail produk</button><br/>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('msglow',480000)">tambahkan ke keranjang</button><br/>
+            
+                
+            </section>
+
+            <section class="product">
+                <a href="produk3.html"><img src="scarlett.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Scarlett</h3>
+                <p class="price">Harga: Rp.350.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('scarlett','Rp.350.000','Membantu mencerahkan kulit dan memudarkan noda di wajah seperti hiperpigmentasi, bekas jerawat, flek dan bekas luka. ','scarlett.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('scarlett',350000)">tambahkan ke keranjang</button><br/>
+            </section>
+
+            <section class="product">
+                <a href="produk3.html"><img src="Wardah.webp" width="200" height="200" alt="Produk 3"></a>
+                <h3>Wardah</h3>
+                <p class="price">Harga: Rp.200.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('wardah','Rp.200.000','Produk Wardah mengandung bahan baku yang aman dan halal, diciptakan untuk kenyamanan dan ketenangan wanita ','wardah.webp')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('wardah',200000)">tambahkan ke keranjang</button><br/>
+                
+            </section>
+
+            <section class="product">
+                <a href="produk3.html"><img src="daviena.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Daviena</h3>
+                <p class="price">Harga: Rp.250.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('daviena','Rp.250.00',' Daviena Skincare adalah rangkaian produk skincare yang terdiri dari banyak produk seperti moisturizer, serum, toner, dan lain-lain.','daviena.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('daviena',250000)">tambahkan ke keranjang</button><br/>
+                
+            </section>
+
+            <section class="product">
+                <a href="produk3.html"><img src="emina.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Emina</h3>
+                <p class="price">Harga: Rp.170.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('emina','Rp.170.000','Produk-produk EMINA sangat recomended untuk kulit-kulit remaja mulai dari usia 13 tahun','emina.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('emina',170000)">tambahkan ke keranjang</button><br/>
+               
+            </section>
+            <section class="product">
+                <a href="produk3.html"><img src="chanel.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Moisturizer Chanel</h3>
+                <p class="price">Harga: Rp.2.050.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('chanel','Rp.2.050.000','Mengandung Camellia Putih yang menjadikan kulit wajah kenyal dan tampak cerah','chanel.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('scarlett',200050)">tambahkan ke keranjang</button><br/>
+            </section>
+            <section class="product">
+                <a href="produk3.html"><img src="SK-II.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Paket SK-II</h3>
+                <p class="price">Harga: Rp.6.000.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('SK-II','Rp.350.00','Ingin Kulit Tampak Sebening Kristal? Gunakan produk SK-II dengan PITERA di setiap tetesnya','SK-II.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('SK-II',6000000)">tambahkan ke keranjang</button><br/>
+            </section>
+            <section class="product">
+                <a href="produk3.html"><img src="somethinc.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Serum Somethinc</h3>
+                <p class="price">Harga: Rp.96.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('Somethinc','Rp.96.000','Serum ini mengandung Beet & Vitamin E yang membantu melembabkan dan menghaluskan kulit','somethinc.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('Somethinc',96000)">tambahkan ke keranjang</button><br/>
+            </section>
+            <section class="product">
+                <a href="produk3.html"><img src="makeover.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Matte Powder foundation</h3>
+                <p class="price">Harga: Rp.500.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('make over','Rp.500.000','Make Over Powerstay Matte Powder Foundation adalah bedak padat (powder foundation) yang mengandung foundation, tahan lama hingga 12 jam','makeover.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('make over',500000)">tambahkan ke keranjang</button><br/>
+            </section>
+            <section class="product">
+                <a href="produk3.html"><img src="diorlipstik.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Dior Lipstik</h3>
+                <p class="price">Harga: Rp.900.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('Dior','Rp.900.000','Dior Addict adalah Dior shine lipstick yang dirancang seperti aksesori fesyen, dengan formula yang sekarang terdiri dari 90%* bahan alami','diorlipstik.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('Dior',900000)">tambahkan ke keranjang</button><br/>
+            </section>
+            <section class="product">
+                <a href="produk3.html"><img src="esteelauder.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Estee Lauder Double Wear</h3>
+                <p class="price">Harga: Rp.7.000.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('estee lauder','Rp.7.000.000','A 24-hour-wear makeup with buildable medium-to-full coverage for a natural matte finish in over 40 flawless shades and multiple undertones','esteelauder.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('estee lauder',700000)">tambahkan ke keranjang</button><br/>
+            </section>
+            <section class="product">
+                <a href="produk3.html"><img src="cushion.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Cushion YOU</h3>
+                <p class="price">Harga: Rp.110.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('YOU','Rp.110.000','Halal 100% Cushion dengan formula high coverage, oil-control, serta ringan di wajah sehingga nyaman untuk dipakai sepanjang hari ','cushion.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('YOU',110000)">tambahkan ke keranjang</button><br/>
+            </section>
+            <section class="product">
+                <a href="produk3.html"><img src="ultima.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>ULTIMA Eyebrow</h3>
+                <p class="price">Harga: Rp.180.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('ultima','Rp.180.00','All-around flawless eye look, comes with triangular tip high-definition pencil, brow mascara and spoolie','ultima.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('ultima',180000)">tambahkan ke keranjang</button><br/>
+            </section>
+            <section class="product">
+                <a href="produk3.html"><img src="eyeshadow.jpg" width="200" height="200" alt="Produk 3"></a>
+                <h3>Trivia Eyeshadow</h3>
+                <p class="price">Harga: Rp.80.000</p>
+                <button class="tombol-detail"
+                onclick="tampilkandetailproduk ('make over','Rp.80.000','yeshadow palette dari series Make Over Powerstay ini hadir dengan beberapa warna baru yang cantik dan intens','eyeshadow.jpg')">detail produk</button></br>
+                <button class="tombol-keranjang"
+                onclick="tambahkanprodukkekeranjang('make over',80000)">tambahkan ke keranjang</button><br/>
+            </section>
+
+
+            <!--Tambahkan lebih banyak produk di sini-->
+
+        </div>
+        <div class="sidebar">
+            <h3>kategori</h3>
+            <div class="kategori-pilihan">
+                <input type="text" id="caribarang" placeholder="cari barang...." onkeyup="caribarang()">
+                <button
+    onclick="filterkategori('all')">semua</button><br/>
+                    <button onclick="filterkategori('produk')">Skintific</button><br/>
+                    <button onclick="filterkategori('product')">MS Glow</button>    
+             </div>
+             <br/> <br/>
+             <div class="keranjang">
+                <h3>keranjang belanja</h3>
+                <ul id="daftar-keranjang">
+                </ul>
+                <p>total belanja: <span id="total-belanja">Rp.0.00</span></p>
+                <button id="checkout" onclick="checkout()">checkout</button>
+             </div>
+            </div>
+            </div>
+    <script>
+        
+    </script>
+
+       
+    <div class="footer">
+<p class="copyright">Copyright 2024. KARABEAUTYBAR.</p>
+ </div>
+</div>
+<script src="toko-kara.js"></script>
+</body>
+
+</html>

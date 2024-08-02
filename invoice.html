@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head /CSS>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KaraBeautyBar</title>
+    <style type="text/css">
+        /*CSS Invoice*/
+        .main-invoice {
+            width: 70%;
+            padding: 20px;
+            box-sizing: border-box;
+            float: left;
+            font-size: 14px;
+        }
+
+        .main-invoice h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /*Style untuk tombol Cetak Invoice*/
+        .main-invoice button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .main-invoice button:hover {
+            background-color: #bba9d6;
+            color: #333;
+        }
+
+        .datapem td {
+            border: 1px solid rgb(233, 136, 136);
+            color: black;
+            background-color: rgb(251, 214, 214);
+            line-height: 17px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar">
+                <ul>
+                 <li><a href="index.html">MENU</a></li>
+                <li><a href="sosmed.html">SOSMED</a></li>
+                <li><a href="kontak.html">contact</a></li>  
+                </ul>
+            </div>
+            <div class="judulKanan">
+                <h1 class="judul">KARABEAUTYBAR</h1>
+            </div>
+        </div>
+        <div class="hero"></div>
+        <div class="content cf" id="cetakke">
+            <div class="main-invoice">
+                <h2>Invoice Pembayaran</h2><br>
+                <h3>Informasi Pengiriman</h3>
+                <table class="datapem">
+                    <tr>
+                        <td width="150px">Nama Pelanggan</td>
+                        <td>:</td>
+                        <td width="450px"><span id="invoice-nama"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat Pengiriman</td>
+                        <td>:</td>
+                        <td><span id="invoice-alamat"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td><span id="invoice-email"></span></td>
+                    </tr>
+                    <tr>
+                        <td>No. Telepon</td>
+                        <td>:</td>
+                        <td><span id="invoice-telepon"></span></td>
+                    </tr>
+                </table>
+                <br />
+
+                <h3>Data Pembayaran</h3>
+                <table class="datapem">
+                    <tr>
+                        <td width="150px">Nama Rekening</td>
+                        <td>:</td>
+                        <td width="450px"><span id="invoice-pengirim"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Rekening</td>
+                        <td>:</td>
+                        <td><span id="invoice-rek"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Bank</td>
+                        <td>:</td>
+                        <td><span id="invoice-bank"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Kantor Cabang</td>
+                    <td>:</td>
+                    <td><span id="invoice-cabang"></span></td>
+                    </tr>
+                </table>
+                <br />
+
+                <h3>Rician Pembelian</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="200px" style="text-align: center;">Nama Produk</th>
+                            <th width="10px" style="text-align: center;">Quantity</th>
+                            <th width="20px" style="text-align: center;">Harga</th>
+                            <th width="150px" style="text-align: center;">Jumlah Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftar-keranjang">
+                        <!-- Baris tabel akan ditambahkan di sini -->
+                    </tbody>
+                    <tbody>
+                        <!-- Baris tabel akan ditambahkan di sini -->
+                        <tr style="background-color: #fff; color: #59436d;">
+                            <td style="text-align: left;" colspan="3">Total Belanja</td>
+                            <td style="text-align: right;"><span id="total-belanjanya">Rp.0.00</span> </td>
+                        </tr>
+                        <tr style="background-color: #fff; color: #59436d;">
+                            <td style="text-align: left;" colspan="3">Ongkos Kirim</td>
+                            <td style="text-align: right;"><span id="invoice-ongkir"></span></td>
+                        </tr>
+                        <tr style="background-color: #fff; color: #59436d;">
+                            <td style="text-align: left;" colspan="3">Total pembayaran</td>
+                            <td style="text-align: right;"><span id="invoice-total"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <h3>Informasi Pembayaran (Rekening Bank)</h3>
+                <p>Silahkan transfer sejumlah Total Pembayaran (<span id="total-bayar"></span>) ke nomor rekening berikut :085727869783 </p>
+                <ul>
+                    <li><span id="invoice-rekening"></span></li>
+                </ul>
+                <p>Kantor Cabang : Indonesia</p><br />
+
+                <!-- Tambahkan tombol "Cetak Invoice" untuk mencetak halaman -->
+
+                <button onclick="cetakInvoice('cetakke')">Cetak Invoice</button>
+            </div>
+            <div class="sidebar">
+                <!--Keranjang Belanja-->
+                <br /><br />
+                <div class="keranjang">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="copyright">Copyright 2024. KARABEAUTYBAR</p>
+        </div>
+    </div>
+
+    <script>
+        //Mengambil data dari sessionStorage
+        const namaPelanggan = JSON.parse(sessionStorage.getItem('namaPelanggan'));
+        console.log(namaPelanggan);
+        const alamatPengiriman = JSON.parse(sessionStorage.getItem('alamatpengiriman'));
+        const email = JSON.parse(sessionStorage.getItem('email'));
+        const telepon = JSON.parse(sessionStorage.getItem('telepon'));
+        const ongkir = JSON.parse(sessionStorage.getItem('ongkir'));
+        const bank = JSON.parse(sessionStorage.getItem('bank'));
+
+        let rekeningInfo; //Variabel untuk menyimpan informasi rekening
+        let namaBank;
+
+        switch (bank) {
+            case 'bca':
+                namaBank = 'Bank BCA';
+                rekeningInfo = 'Bank BCA : 238 080 156 4';
+                break;
+            case 'bni':
+                namaBank = 'Bank BNI';
+                rekeningInfo = 'Bank BNI : 9871 2776 143';
+                break;
+            case 'mandiri':
+                namaBank = 'Bank Mandiri';
+                rekeningInfo = 'Bank Mandiri : 231 412 138 753 2';
+                break;
+            case 'bri':
+                namaBank = 'Bank BRI';
+                rekeningInfo = 'Bank BRI : 0069-01-076521-56-0';
+                break;
+            default:
+                namaBank = 'Lainnya';
+                rekeningInfo = 'Bank Lain : Nomor Rekening Lain';
+        }
+
+        const norek = JSON.parse(sessionStorage.getItem('norek'));
+        const namaRekening = JSON.parse(sessionStorage.getItem('namarekening'));
+        const cabang = JSON.parse(sessionStorage.getItem('cabang'));
+
+        //Menampilkan data di elemen HTML 
+        document.getElementById('invoice-nama').textContent = namaPelanggan;
+        document.getElementById('invoice-alamat').textContent = alamatPengiriman;
+        document.getElementById('invoice-email').textContent = email;
+        document.getElementById('invoice-telepon').textContent = telepon;
+        document.getElementById('invoice-rekening').textContent = rekeningInfo;
+        document.getElementById('invoice-bank').textContent = bank;
+        document.getElementById('invoice-rek').textContent = norek;
+        document.getElementById('invoice-pengirim').textContent = namaRekening;
+        document.getElementById('invoice-cabang').textContent = cabang;
+        document.getElementById('invoice-ongkir').textContent = `Rp. ${ongkir}`;
+
+        //Menampilkan Produk dari Keranjang Belanja 
+        //Ambil daftar belanja dari Session Storage
+        const keranjangBelanja = JSON.parse(sessionStorage.getItem('keranjangBelanja'));
+        //Tampilkan daftar belanja pada halaman 
+        const daftarKeranjang = document.getElementById('daftar-keranjang');
+        const totalBelanjanya = document.getElementById('total-belanjanya');
+        let totalBelanja = 0;
+
+        keranjangBelanja.forEach((produk) => {
+            const itemProduk = document.createElement('tr');
+            itemProduk.innerHTML = `
+            <td style='text-align: left; background-color: #fff; color: #000;'>${produk.nama}</td>
+            <td style='text-align: center; background-color: #fff; color: #000;'>${produk.jumlah}</td>
+            <td style='text-align: right; background-color: #fff; color: #000;'>${produk.harga}</td>
+            <td style='text-align: right; background-color: #fff; color: #000;'>Rp. ${produk.jumlah * produk.harga}</td>
+            `;
+            daftarKeranjang.appendChild(itemProduk);
+            totalBelanja += (produk.jumlah * produk.harga);
+        });
+
+        totalBelanjanya.textContent = `Rp. ${totalBelanja.toFixed(2)}`;
+        const totalBayar = totalBelanja + Number(ongkir);
+
+        console.log(typeof(Number(ongkir)));
+        console.log(typeof(totalBelanja));
+        console.log(typeof(totalBayar));
+
+        document.getElementById('invoice-total').textContent = `Rp. ${totalBayar.toFixed(2)}`;
+        document.getElementById('total-bayar').textContent = `Rp. ${totalBayar.toFixed(2)}`;
+
+        //Fungsi untuk mencari halaman
+        function cetakInvoice(divName) {
+            //window.print();
+            var printContents = document.getElementById(divName).innerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;
+            window.print();
+
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,546 @@
+/*http://meyrweb.com/eric/tools/css/reset/v2.0 | 20110126
+  License: none [public domain]
+   */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTMLS display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background-color: #ddb6b6;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote::after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* style */
+body {
+  font: 16px/28px arial, sans-serif;
+  background-color: #eaeaea;
+  color: #333;
+  scroll-behavior: smooth;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+}
+.header {
+  padding: 50px;
+  padding-bottom: 30px;
+  height: 130px;
+  background-color: rgb(243, 157, 157);
+  display: flex;
+}
+.header .judulkanan {
+  width: 20%;
+}
+.header .menukiri {
+  width: 80%;
+}
+.header .judul {
+  font-size: 30px;
+  font-weight: inherit;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: right;
+  width: 1000px;
+  color: rgb(152, 6, 6);
+}
+.header ul li {
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 10px;
+  position: relative;
+}
+.header a {
+  text-decoration: none;
+  color: rgb(152, 6, 6);
+  padding: 20px;
+  font-weight: bold;
+}
+.header a:hover {
+  background-color: palegoldenrod;
+  color: pink;
+}
+
+.header .navbar {
+  width: 700px;
+  float: left;
+  font-family: sans-serif;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 10px;
+  position: relative;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: rgb(115, 2, 2);
+  text-transform: uppercase;
+}
+.navbar ul li::after {
+  content: '';
+  height: 5px;
+  width: 0;
+  background: #59436d;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.hero {
+  height: 430px;
+  background-image: url(backround3.jpg);
+  background-size: cover;
+  background-position: 0-200px;
+  border-top: 6px solid rgb(248, 155, 227);
+  border-bottom: 6px solid rgb(248, 155, 227);
+}
+.main {
+  width: 80%;
+  padding: 5%;
+  box-sizing: border-box;
+  float: left;
+  background-color: pink;
+}
+.main h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.product {
+  background-color: rgb(210, 235, 241);
+  border: 1px solod #ddd;
+  margin: 5px;
+  padding: 25px;
+  text-align: center;
+  width: 300px;
+  float: left;
+}
+.product h3 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bolder;
+}
+.product img {
+  height: 200px;
+  width: 200px;
+}
+.price {
+  font-weight: bold;
+  color: #27ae60;
+}
+.sidebar {
+  width: 200px;
+  float: right;
+  padding: 20px;
+}
+.sidebar h3 {
+  font-weight: bold;
+  color: #666;
+}
+.sidebar img {
+  width: 70px;
+  float: left;
+  padding-right: 10px;
+}
+.sidebar p {
+  font: 12px/18px arial;
+}
+.footer {
+  background-color: #333;
+  padding: 10px;
+}
+.footer-copyright {
+  color: #eaeaea;
+  text-align: center;
+  font-size: 12px;
+}
+.footer p {
+  color: #eaeaea;
+}
+/* pemanfaatan clearfix untuk mengatasi float*/
+.cf:before,
+.cf:after {
+  content: ' '; /* 1 */
+  display: table; /* 2 */
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+/*part */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.popup img {
+  max-width: 100%;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+.popup h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.popup h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.popup p {
+  font-size: 16px;
+}
+.popup .price {
+  font-weight: bold;
+  color: #27ae60;
+}
+.popup .tombol-beli {
+  background: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+#formulir-checkout {
+  background-color: #f8f8f8;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 750px;
+  margin: 0 auto;
+}
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+input[type='number'],
+select {
+  width: 20%;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+select {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+#selesaikan-pembayaran {
+  display: block;
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#selesaikan-pembayaran:hover {
+  background-color: #9aaf3d;
+  color: #333;
+}
+table {
+  margin-top: 10px;
+}
+thead {
+  background-color: #000000;
+  color: #fff6f6;
+}
+thead th {
+  padding: 70%;
+  text-align: left;
+}
+tbody tr:nth-child(odd) {
+  background-color: #ca8f8f;
+  color: #0e0d0d;
+}
+thead th,
+tbody td {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 30px;
+}
+tbody tr:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+.keranjang {
+  font-size: 12px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* Gaya CSS untuk tata letak laman */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+.contact-form {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+  background: rgb(247, 207, 207);
+  width: 100%;
+  padding: 50px;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  align-items: center;
+}
+
+.contact-form h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #e977bd;
+  font-family: 'poppins';
+}
+.contact-form h2 {
+  line-height: 40px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #b07fea;
+  text-align: center;
+}
+.contact-form .main {
+  position: relative;
+  display: flex;
+  /* margin: 30px 0; */
+}
+.content {
+  flex-basis: 50%;
+  padding: 3em 3em;
+  background: fff;
+  box-shadow: 2px 9px 49px -17px rgba(156, 39, 148, 0.1);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+form-img {
+  flex-basis: 50%;
+  background: #ffffff;
+  background-size: cover;
+  padding: 40px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  align-items: center;
+  display: grid;
+}
+.form-img img {
+  max-width: 100%;
+}
+
+.contact-form form {
+  margin: 30px 0;
+}
+.contact-form input,
+textarea {
+  outline: none;
+  margin-bottom: 15px;
+  font-stretch: 20px;
+  color: black;
+  padding: 14px 20px;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  background: #f5c7e3;
+  transition: 0.3s ease;
+}
+.contact-form input:focus {
+  background: transparent;
+  border: 1px solid #4f2769;
+}
+.contact-form button {
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  background: #ec74e8;
+  font-weight: 600;
+  transition: 0.3s ease;
+  padding: 14px 15px;
+  border: 1px solid #e49fd6;
+}
+@media (max-width: 736px) {
+  .contact-form .main {
+    flex-direction: column;
+  }
+  .contact-form form {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .form-img {
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    order: 2;
+  }
+  .content {
+    order: 1;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+}

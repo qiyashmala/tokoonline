@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaraBeautyBar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <ul>
+            <li><a href="index.html">MENU</a></li>
+            <li><a href="sosmed.html">SOSMED</a></li>
+            <li><a href="kontak.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="judulKanan">
+            <hl class="judul">KARA BEAUTY BAR</hl>
+        </div>
+    
+    <div class="hero"></div>
+    <div class="content cf">
+        <div class="main">
+            <h2>checkout</h2>
+            <h3>daftar produk dalam keranjang belanja</h3>
+            <table>
+                <thead>
+                    <tr style="background-color: rgb(59, 55, 55);">
+                        <th width="200px" sytle="text-align: center;">Nama Produk</th>
+                        <th width="10px" sytle="text-align: center;">Quantity</th>
+                        <th width="20px" sytle="text-align: center;">Harga</th>
+                        <th width="150px" sytle="text-align: center;">Jumlah Harga</th>
+                    </tr>
+                </thead>
+                <tbody id="daftar-keranjang">
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td style="text-align: right" colspan="3">Total Belanja:</td>
+                        <td style="text-align: right">
+                        <span id="total-belanjanya">Rp. 0.00 </span>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <form id="formulir-checkout" action="invoice.html" method="post">
+                <h2>Informasi Pengiriman</h2>
+                <label for="nama">Nama Lengkap:</label>
+                <textarea id="nama" name="nama" required></textarea><br>
+
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" required></textarea><br>
+
+                <label for="rt">RT:</label>
+                <input type="number" id="rt" name="rt" required><br>
+                
+                <label for="rt">RW:</label>
+                <input type="number" id="rw" name="rw" required><br>
+
+                <label for="desa">Desa:</label>
+                <input type="text" id="desa" name="desa" required><br>
+
+                <label for="kecamatan">Kecamatan:</label>
+                <input type="text" id="kecamatan" name="kecamatan" required><br>
+
+                <label for="kota">Kota:</label>
+                <input type="text" id="kota" name="kota" required><br>
+
+                <label for="kode-pos">Kode Pos:</label>
+                <input type="number" id="kode-pos" name="kode-pos" required><br>
+
+                <label for="ongkir">Ongkos Kirim:</label>
+                <input type="number" id="ongkir" name="ongkir" required><br>
+
+                <h2>Informasi Kontak</h2>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="telepon">Nomor Telepon:</label>
+                <input type="tel" id="telepon" name="telepon" required><br>
+
+                    <h2>informasi pembayarean (rekening bank)</h2>
+                    <p>segera selesaikan proses pembelian, dengan cara melakukan tranfer sesuai jumlah yang tertera
+                        pada total belanja di atas ke nomor rekening toko karanich.</p>
+
+                    <label for="bank">bank:</label>
+                    <select id="bank" name="bank" required>
+                        <option value="bca"> BCA (Bank Cenral Asia)</option>
+                        <option value="bni"> BNI (Bank Negara Indonesia)</option>
+                        <option value="mandiri">Mandiri (Bank Mandiri)</option>
+                        <option value="bri"> BRI (Bank Rakyat Indonesia)</option>
+                    </select><br>
+
+                    <label for="nomor-rekening">nomor rekening:</label>
+                    <input type="text" id="nomor-rekening" name="nomor-rekening" required></br>
+
+                    <label for="nomor-rekening">nama pemegang rekening:</label>
+                    <input type="text" id="nama-rekening" name="nama-rekening" required></br>
+                    <label for="cabang">cabang bang(opsional)</label>
+                    <input type="text" id="cabang" name="cabang" required></br>
+
+                    <button id="selesaikan-pembayaran">selesaikan pembayaran</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="copyright">copyright 2024. KARABEAUTYBAR</p>
+    </div>
+</div>
+
+<script src="src/js/test.js"></script>
+
+</body>
+</html>

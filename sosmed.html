@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KaraBeautyBar</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #dccaf4;
+        /* text-align: center; */
+      }
+
+      header {
+        background-color: #f9bab4;
+        color: #000000;
+        padding: 1em;
+        width: 100%;
+        text-align: center;
+        border-top: 6px solid #f6815d;
+        border-bottom: 6px solid #f6815d;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: space-around;
+        padding: 2em;
+        min-height: 100vh;
+        size: 1%;
+      }
+
+      .social-icon {
+        cursor: pointer;
+        margin: 0 1em;
+      }
+
+      .social-icon img {
+        width: 100px; /* Sesuaikan ukuran ikon */
+        height: 100px; /* Sesuaikan ukuran ikon */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="navbar">
+          <ul>
+            <li><a href="index.html">MENU</a></li>
+            <li><a href="sosmed.html">SOSMED</a></li>
+            <li><a href="kontak.html">contact</a></li>
+          </ul>
+        </div>
+        <div class="judulKanan">
+          <h1 class="judul">KARA BEAUTY BAR</h1>
+        </div>
+      </div>
+      <header>
+        <h1>Our Social Media</h1>
+        <p>
+          You can follow our social media account and also chat us in WhatsApp
+        </p>
+      </header>
+
+      <div class="social-icons">
+        <div class="social-icon" onclick="openInstagram()">
+          <img src="instagram-icon.png" alt="Instagram" />
+          <p>Instagram</p>
+        </div>
+
+        <div class="social-icon" onclick="openWhatsApp()">
+          <img src="whatsapp-icon.png" alt="WhatsApp" />
+          <p>WhatsApp</p>
+        </div>
+
+        <div class="social-icon" onclick="openTikTok()">
+          <img src="tiktok-icon.jpg" alt="TikTok" />
+          <p>TikTok</p>
+        </div>
+      </div>
+      <div>
+        <footer>
+          <p>&copy; copyright 2024. KARABEAUTYBAR</p>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      function openInstagram() {
+        window.open("https://www.instagram.com/kkarrani_/", "_blank");
+      }
+
+      function openWhatsApp() {
+        window.open("https://wa.me/0857869783", "_blank");
+      }
+
+      function openTikTok() {
+        window.open("https://www.tiktok.com/@_spillprodukmurah", "_blank");
+      }
+    </script>
+  </body>
+</html>
